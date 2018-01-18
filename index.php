@@ -5,7 +5,11 @@
     <?php if (isset($_GET["login"])&& $_GET["login"]==false){?>
     <p class ="alert-danger">Usuário ou senha inválida!
     <?php }?>
+    
             <h1>Bem vindo!</h1>
+            <?php if (isset($_COOKIE["usuario_logado"])) {?>
+                <p class ="text-success">Você está logado como <?= $_COOKIE["usuario_logado"]?>
+            <?php } else {?>
 
             <h2>Login</h2>
             <form action = "login.php" method ="post">
@@ -23,5 +27,6 @@
                  </tr>
             </table>
             </form>
+            <?php }?>
 
-<?php include("rodape.php"); ?>
+            <?php include("rodape.php"); ?>
