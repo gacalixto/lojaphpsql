@@ -1,7 +1,11 @@
-<?php include("cabecalho.php"); ?>
+<?php 
+include("functionsUser.php");
+verificaUsuario();
+include("cabecalho.php"); ?>
 <?php include("categoriaBD.php");
 include("connection.php");
 $categorias= listaCategorias($conexao);
+
 ?>
 
 <h1>Formulário de cadastro</h1>

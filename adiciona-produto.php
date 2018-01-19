@@ -1,9 +1,20 @@
-<?php include("cabecalho.php"); ?>
+<?php 
+if (!isset($_COOKIE["usuario_logado"]))
+{
+    header("Location:index.php?falhaDeSeguranca=true");
+    die();
+}
+include("functionsUser.php");
+verificaUsuario();
+include("cabecalho.php"); ?>
+
 
 <?php
 
 include("produtoBD.php");
 include("connection.php");
+
+verificaUsuario();
 
 $nome = $_POST["nome"];
 $preco = $_POST["preco"];
