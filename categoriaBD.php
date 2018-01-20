@@ -1,4 +1,5 @@
 <?php
+require_once("connection.php");
 function listaCategorias($conexao)
 {
     $query="Select * from categorias";

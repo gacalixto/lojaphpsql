@@ -1,14 +1,13 @@
 <?php 
 
-include("functionsUser.php");
+require_once("functionsUser.php");
 verificaUsuario();
-include("cabecalho.php"); ?>
+require_once("cabecalho.php"); ?>
 
 
 <?php
 
-include("produtoBD.php");
-include("connection.php");
+require_once("produtoBD.php");
 
 $nome = $_POST["nome"];
 $preco = $_POST["preco"];
@@ -34,4 +33,4 @@ if(insereProduto($conexao, $nome, $preco,$descricao,$categoria_id,$usado)) { ?>
 }
 ?>
 
-<?php include("rodape.php"); ?>
+<?php require_once("rodape.php"); ?>

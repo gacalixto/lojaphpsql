@@ -1,7 +1,7 @@
-<?php include("cabecalho.php"); ?>
-<?php include("categoriaBD.php");
-include("produtoBD.php");
-include("connection.php");
+<?php require_once("cabecalho.php"); ?>
+<?php require_once("categoriaBD.php");
+require_once("produtoBD.php");
+
 $id=$_GET['id'];
 $produto = buscaProduto($conexao,$id);
 $categorias= listaCategorias($conexao);
@@ -12,7 +12,7 @@ $categorias= listaCategorias($conexao);
     <input type="hidden" name="id" value="<?=$produto['id']?>" />
 
     <table class="table">
-    <?php include("produto-formulario-base.php");?>
+    <?php require_once("produto-formulario-base.php");?>
 
         <tr>
             <td><button class="btn btn-primary" type="submit">Alterar</button></td>
@@ -20,4 +20,4 @@ $categorias= listaCategorias($conexao);
     </table>
 </form>
 
-<?php include("rodape.php"); ?>
+<?php require_once("rodape.php"); ?>

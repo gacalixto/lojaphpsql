@@ -1,9 +1,8 @@
-<?php  include("functionsUser.php");?>
+<?php  require_once("functionsUser.php");?>
 <?php
-    include("cabecalho.php");?>
-<?php
-    include("connection.php");?>
-<?php include("produtoBD.php");?>
+    require_once("cabecalho.php");?>
+
+<?php require_once("produtoBD.php");?>
 <?php if(array_key_exists("removed",$_GET)&& $_GET['removed']==true)
 {?>
 <p class="alert-success">Produto apagado com sucesso</p>
@@ -41,4 +40,4 @@ foreach($produtos as $produto){
 ?>
 </table>
 <?php
-    include("rodape.php");?>
+    require_once("rodape.php");?>

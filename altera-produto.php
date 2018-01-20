@@ -1,6 +1,5 @@
-<?php include("cabecalho.php");         
- include("connection.php");            
- include("produtoBD.php"); 
+<?php require_once("cabecalho.php");         
+ require_once("produtoBD.php"); 
  $id = $_POST['id'];
 $nome = $_POST['nome'];
 $preco = $_POST['preco'];
@@ -22,4 +21,4 @@ if(alteraProduto($conexao,$id, $nome, $preco, $descricao, $categoria_id, $usado)
 }
 ?>
 
-<?php include("rodape.php"); ?>
+<?php require_once("rodape.php"); ?>

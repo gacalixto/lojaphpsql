@@ -1,6 +1,6 @@
 <?php
-include("functionsUser.php"); 
-include("cabecalho.php"); ?>
+require_once("functionsUser.php"); 
+require_once("cabecalho.php"); ?>
             <h1>Bem vindo!</h1>
             <?php if (usuarioEstaLogado()) {?>
                 <p class ="text-success">Você está logado como <?= usuarioLogado() ?>
@@ -25,4 +25,4 @@ include("cabecalho.php"); ?>
             </form>
             <?php }?>
 
-            <?php include("rodape.php"); ?>
+            <?php require_once("rodape.php"); ?>

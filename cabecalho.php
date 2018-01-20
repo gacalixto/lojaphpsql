@@ -1,6 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
-include("sessionAlert.php");
+require_once("sessionAlert.php");
 ?>
 <?php  mostraAlerta("success"); ?>
 <?php mostraAlerta("danger"); ?>

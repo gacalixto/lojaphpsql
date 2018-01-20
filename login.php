@@ -1,6 +1,6 @@
-<?php include ("connection.php");
-include("usuarioBD.php");
-include("functionsUser.php");
+<?php require_once ("connection.php");
+require_once("usuarioBD.php");
+require_once("functionsUser.php");
 $usuario =buscaUsuario($conexao,$_POST['email'],$_POST['senha']);
 if($usuario == null) {
     $_SESSION["danger"] = "Usuário ou senha inválido.";
