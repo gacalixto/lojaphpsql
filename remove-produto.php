@@ -1,8 +1,11 @@
 <?php
 include("connection.php");
 include("produtoBD.php");
+
+include("functionsUser.php");
 $id =$_POST['id'];
 deletaProduto($conexao,$id);
-header("Location: produto-lista.php?removed=true");
+$_SESSION["success"] = "Produto removido com sucesso.";
+header("Location: produto-lista.php");
 die();
 ?>

@@ -1,19 +1,22 @@
+<?php  include("functionsUser.php");?>
 <?php
     include("cabecalho.php");?>
 <?php
     include("connection.php");?>
 <?php include("produtoBD.php");?>
-<?php
-$produtos = listaProdutos($conexao);
-
-?>
+<?php if (isset($_SESSION["success"])){?>
+    <p class ="alert-success"><?=$_SESSION["success"]?>
+    <?php  unset($_SESSION["success"]);
+             }?>
 <?php if(array_key_exists("removed",$_GET)&& $_GET['removed']==true)
 {?>
 <p class="alert-success">Produto apagado com sucesso</p>
 <?php
 }
 ?>
+<?php $produtos = listaProdutos($conexao);?>
 <table class="table table-striped table-bordered">
+
 <tr>
         <th>Nome</th>
         <th>Preço</th>
