@@ -4,10 +4,6 @@
 <?php
     include("connection.php");?>
 <?php include("produtoBD.php");?>
-<?php if (isset($_SESSION["success"])){?>
-    <p class ="alert-success"><?=$_SESSION["success"]?>
-    <?php  unset($_SESSION["success"]);
-             }?>
 <?php if(array_key_exists("removed",$_GET)&& $_GET['removed']==true)
 {?>
 <p class="alert-success">Produto apagado com sucesso</p>

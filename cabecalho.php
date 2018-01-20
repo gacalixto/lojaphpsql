@@ -1,3 +1,9 @@
+<?php
+error_reporting(E_ALL ^ E_NOTICE);
+include("sessionAlert.php");
+?>
+<?php  mostraAlerta("success"); ?>
+<?php mostraAlerta("danger"); ?>
 <html>
 <head>
     <title>Minha loja</title>
